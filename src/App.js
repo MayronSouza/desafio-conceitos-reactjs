@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     api.get('repositories')
       .then(response => {
-        setRepositories([response.data])
+        setRepositories([...response.data])
       })
   }, [])
 
